@@ -1,0 +1,1035 @@
+(|SYSTEM|::|VERSION| '(20080430.))
+#0Y_ #0Y |CHARSET|::|UTF-8|
+#Y(#:|1 12 (DEFPACKAGE "LIBSVM" (:MODERN T) ...)-1-1|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 01 02 64 64 31 F0 3E 19 01) ("LIBSVM")
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|1 12 (DEFPACKAGE "LIBSVM" (:MODERN T) ...)-1-2|
+   #34Y(00 00 00 00 00 00 00 00 20 01 DA DB 71 DD 38 06 C7 F9 C8 FA 8F 77 08 DE
+        DB 31 ED DF DB 31 EC 3E 19 01)
+   ("COMMON-LISP" "LIBSVM" #.#'|COMMON-LISP|::|STRING=|
+    #.#'|COMMON-LISP|::|PACKAGE-NAME| "COMMON-LISP" "CS-COMMON-LISP")
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|1 12 (DEFPACKAGE "LIBSVM" (:MODERN T) ...)-1-3|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA DB 64 DC 2D 04 03 3E 19 01)
+   ("def-c-enum" "EXPORTING" "LIBSVM" |SYSTEM|::|SHADOWING-IMPORT-CERROR|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|1 12 (DEFPACKAGE "LIBSVM" (:MODERN T) ...)-1-4|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA DB 64 DC 2D 04 03 3E 19 01)
+   ("def-c-struct" "EXPORTING" "LIBSVM" |SYSTEM|::|SHADOWING-IMPORT-CERROR|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|1 12 (DEFPACKAGE "LIBSVM" (:MODERN T) ...)-1-5|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA DB 64 DC 2D 04 03 3E 19 01)
+   ("def-call-out" "EXPORTING" "LIBSVM" |SYSTEM|::|SHADOWING-IMPORT-CERROR|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|1 12 (DEFPACKAGE "LIBSVM" (:MODERN T) ...)-1-6|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA DB 64 DC 2D 04 03 3E 19 01)
+   ("def-c-type" "EXPORTING" "LIBSVM" |SYSTEM|::|SHADOWING-IMPORT-CERROR|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|1 12 (DEFPACKAGE "LIBSVM" (:MODERN T) ...)-1-7|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA DB 64 DC 2D 04 03 3E 19 01)
+   ("def-c-var" "EXPORTING" "LIBSVM" |SYSTEM|::|SHADOWING-IMPORT-CERROR|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|1 12 (DEFPACKAGE "LIBSVM" (:MODERN T) ...)-1-8|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA DB 64 DC 2D 04 03 3E 19 01)
+   ("defun" "EXPORTING" "LIBSVM" |SYSTEM|::|SHADOWING-IMPORT-CERROR|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|1 12 (DEFPACKAGE "LIBSVM" (:MODERN T) ...)-1-9|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA DB 64 DC 2D 04 03 3E 19 01)
+   ("defvar" "EXPORTING" "LIBSVM" |SYSTEM|::|SHADOWING-IMPORT-CERROR|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|1 12 (DEFPACKAGE "LIBSVM" (:MODERN T) ...)-1-10|
+   #17Y(00 00 00 00 00 00 00 00 20 01 DA DB 31 EC 3E 19 01)
+   (("CS-COMMON-LISP" "FFI") "LIBSVM")
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|1 12 (DEFPACKAGE "LIBSVM" (:MODERN T) ...)-1-11|
+   #15Y(00 00 00 00 00 00 00 00 20 01 DA 31 D9 19 01) ("LIBSVM")
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|NIL| |COMMON-LISP|::|NIL|))
+#Y(#:|13 13 (IN-PACKAGE "LIBSVM")-2|
+   #17Y(00 00 00 00 00 00 00 00 20 01 DA 31 F6 0F 01 19 01)
+   ("LIBSVM" |COMMON-LISP|::|*PACKAGE*|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|14 14 (setf (documentation # 'SYSTEM::IMPNOTES) "libsvm")-3|
+   #21Y(00 00 00 00 00 00 00 00 20 01 DA 71 D9 DB AD DC 2D 03 03 19 02)
+   ("LIBSVM" "libsvm" |SYSTEM|::|IMPNOTES|
+    #.(|SYSTEM|::|GET-SETF-SYMBOL| '|CLOS|::|DOCUMENTATION|))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|16 16 (default-foreign-language :STDC)-4|
+   #36Y(03 00 01 00 00 00 00 00 20 01 DA DB 38 05 72 6B 53 08 63 AF 30 02 C8 0F
+        04 54 64 67 00 00 00 30 02 55 19 02)
+   (#.#'|EXT|::|PACKAGE-LOCK| ("FFI")
+    #.(|SYSTEM|::|GET-SETF-SYMBOL| '|EXT|::|PACKAGE-LOCK|) :|STDC|
+    |FFI|::|*FOREIGN-LANGUAGE*|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|20 20 (defvar *libsvm-output* *standard-output* ...)-6-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|*libsvm-output*|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|20 20 (defvar *libsvm-output* *standard-output* ...)-6-2|
+   #31Y(00 00 00 00 00 00 00 00 20 01 DA 31 62 DB 8C 57 05 DB 6B 02 31 5A DB DD
+        DE 2D 03 05 C6 19 01)
+   ((|COMMON-LISP|::|SPECIAL| |LIBSVM|::|*libsvm-output*|)
+    |LIBSVM|::|*libsvm-output*| |COMMON-LISP|::|*STANDARD-OUTPUT*|
+    |COMMON-LISP|::|VARIABLE| "The stream for svm.so messages."
+    |SYSTEM|::|%SET-DOCUMENTATION|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|21 22 (COMMON-LISP:DEFUN write-string-to-libsvm-output (s) ...)-7|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|write-string-to-libsvm-output|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|write-string-to-libsvm-output|
+       #23Y(00 00 00 00 01 00 00 00 26 02 AD 6B 00 38 02 31 95 6B 00 31 9B 19
+            02)
+       (|LIBSVM|::|*libsvm-output*|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|s|) |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|23 24 (def-call-in write-string-to-libsvm-output (:NAME "libsvm_print_string") ...)-8-2|
+   #13Y(00 00 00 00 00 00 00 00 20 01 C5 19 01)
+   (|LIBSVM|::|write-string-to-libsvm-output|) |COMMON-LISP|::|NIL|)
+#Y(#:|32 36 (def-c-var *libsvm-version* (:NAME "libsvm_version") ...)-10-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|*libsvm-version*|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|32 36 (def-c-var *libsvm-version* (:NAME "libsvm_version") ...)-10-2|
+   #32Y(00 00 00 00 00 00 00 00 20 01 DA 93 00 0F DB DC AE 32 A2 DB 2F 03 DB DE
+        DF 6F 06 32 A2 C6 19 02)
+   (#.(|FFI|::|FIND-FOREIGN-VARIABLE| '"libsvm_version"
+       (|FFI|::|PARSE-C-TYPE| '|FFI|::|INT|) |FFI|::|*FOREIGN-LIBRARY*|
+       |COMMON-LISP|::|NIL| |COMMON-LISP|::|NIL|)
+    |LIBSVM|::|*libsvm-version*| |FFI|::|FOREIGN-VARIABLE|
+    |SYSTEM|::|%PROCLAIM-SYMBOL-MACRO| |SYSTEM|::|SYMBOLMACRO|
+    (|FFI|::|FOREIGN-VALUE|
+     (|COMMON-LISP|::|LOAD-TIME-VALUE|
+      (|COMMON-LISP|::|GET| '|LIBSVM|::|*libsvm-version*|
+       '|FFI|::|FOREIGN-VARIABLE|)))
+    |SYSTEM|::|MAKE-GLOBAL-SYMBOL-MACRO|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|38 38 (def-c-type node (c-struct list # ...))-11-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|node|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|38 38 (def-c-type node (c-struct list # ...))-11-2-1|
+   #17Y(00 00 00 00 00 00 00 00 20 01 DA DB 30 02 3E 19 01)
+   ((|FFI|::|C-STRUCT| |COMMON-LISP|::|LIST| (|LIBSVM|::|index| |FFI|::|INT|)
+     (|LIBSVM|::|value| |COMMON-LISP|::|DOUBLE-FLOAT|))
+    |LIBSVM|::|node| |FFI|::|PARSE-C-TYPE|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|38 38 (def-c-type node (c-struct list # ...))-11-2-2|
+   #13Y(00 00 00 00 00 00 00 00 20 01 C5 19 01) (|LIBSVM|::|node|)
+   |COMMON-LISP|::|NIL|)
+#Y(#:|40 43 (def-c-type problem (c-struct list # ...))-12-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|problem|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|40 43 (def-c-type problem (c-struct list # ...))-12-2-1|
+   #17Y(00 00 00 00 00 00 00 00 20 01 DA DB 30 02 3E 19 01)
+   ((|FFI|::|C-STRUCT| |COMMON-LISP|::|LIST| (|LIBSVM|::|l| |FFI|::|INT|)
+     (|LIBSVM|::|y| (|FFI|::|C-ARRAY-PTR| |COMMON-LISP|::|DOUBLE-FLOAT|))
+     (|LIBSVM|::|x|
+      (|FFI|::|C-ARRAY-PTR| (|FFI|::|C-ARRAY-PTR| |LIBSVM|::|node|))))
+    |LIBSVM|::|problem| |FFI|::|PARSE-C-TYPE|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|40 43 (def-c-type problem (c-struct list # ...))-12-2-2|
+   #13Y(00 00 00 00 00 00 00 00 20 01 C5 19 01) (|LIBSVM|::|problem|)
+   |COMMON-LISP|::|NIL|)
+#Y(#:|43 52 (defun problem-l (problem) ...)-13-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|problem-l|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|43 52 (defun problem-l (problem) ...)-13-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|problem-l| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|problem-l|
+       #18Y(00 00 00 00 01 00 00 00 26 02 AD DA 70 01 2F 02 19 02)
+       (|LIBSVM|::|l| |FFI|::|%SLOT| |FFI|::|FOREIGN-VALUE|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|problem|) |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|53 56 (defun problem-y (problem &optional #) ...)-14-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|problem-y|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|53 56 (defun problem-y (problem &optional #) ...)-14-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|problem-y| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|problem-y|
+       #37Y(00 00 00 00 01 00 01 00 26 08 3B 01 04 AE 2F 00 F9 AE DB 70 02 DD
+            DE DF B1 7B 03 7B 02 6F 06 70 07 2F 08 19 03)
+       (|LIBSVM|::|problem-l| |LIBSVM|::|y| |FFI|::|%SLOT| |FFI|::|C-PTR|
+        |FFI|::|C-ARRAY| |COMMON-LISP|::|DOUBLE-FLOAT| |FFI|::|PARSE-C-TYPE|
+        |FFI|::|%CAST| |FFI|::|FOREIGN-VALUE|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|problem| |COMMON-LISP|::|&OPTIONAL|
+        (|LIBSVM|::|len| (|LIBSVM|::|problem-l| |LIBSVM|::|problem|)))
+       |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|57 59 (defun problem-x (problem &optional #) ...)-15-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|problem-x|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|57 59 (defun problem-x (problem &optional #) ...)-15-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|problem-x| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|problem-x|
+       #37Y(00 00 00 00 01 00 01 00 26 08 3B 01 04 AE 2F 00 F9 AE DB 70 02 DD
+            DE DF B1 7B 03 7B 02 6F 06 70 07 2F 08 19 03)
+       (|LIBSVM|::|problem-l| |LIBSVM|::|x| |FFI|::|%SLOT| |FFI|::|C-PTR|
+        |FFI|::|C-ARRAY| (|FFI|::|C-ARRAY-PTR| |LIBSVM|::|node|)
+        |FFI|::|PARSE-C-TYPE| |FFI|::|%CAST| |FFI|::|FOREIGN-VALUE|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|problem| |COMMON-LISP|::|&OPTIONAL|
+        (|LIBSVM|::|len| (|LIBSVM|::|problem-l| |LIBSVM|::|problem|)))
+       |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|61 65 (defun problem-y-n (problem n &optional ...) ...)-16-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|problem-y-n|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|61 65 (defun problem-y-n (problem n &optional ...) ...)-16-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|problem-y-n| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|problem-y-n|
+       #42Y(00 00 00 00 02 00 01 00 26 09 3B 01 04 AF 2F 00 F9 AF DB 70 02 DD
+            DE DF B1 7B 03 7B 02 6F 06 70 07 6F 08 AF 70 09 2F 0A 19 04)
+       (|LIBSVM|::|problem-l| |LIBSVM|::|y| |FFI|::|%SLOT| |FFI|::|C-PTR|
+        |FFI|::|C-ARRAY| |COMMON-LISP|::|DOUBLE-FLOAT| |FFI|::|PARSE-C-TYPE|
+        |FFI|::|%CAST| |FFI|::|%DEREF| |FFI|::|%ELEMENT|
+        |FFI|::|FOREIGN-VALUE|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|problem| |LIBSVM|::|n| |COMMON-LISP|::|&OPTIONAL|
+        (|LIBSVM|::|len| (|LIBSVM|::|problem-l| |LIBSVM|::|problem|)))
+       |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|66 70 (defun problem-x-n (problem n &optional ...) ...)-17-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|problem-x-n|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|66 70 (defun problem-x-n (problem n &optional ...) ...)-17-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|problem-x-n| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|problem-x-n|
+       #42Y(00 00 00 00 02 00 01 00 26 09 3B 01 04 AF 2F 00 F9 AF DB 70 02 DD
+            DE DF B1 7B 03 7B 02 6F 06 70 07 6F 08 AF 70 09 2F 0A 19 04)
+       (|LIBSVM|::|problem-l| |LIBSVM|::|x| |FFI|::|%SLOT| |FFI|::|C-PTR|
+        |FFI|::|C-ARRAY| (|FFI|::|C-ARRAY-PTR| |LIBSVM|::|node|)
+        |FFI|::|PARSE-C-TYPE| |FFI|::|%CAST| |FFI|::|%DEREF| |FFI|::|%ELEMENT|
+        |FFI|::|FOREIGN-VALUE|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|problem| |LIBSVM|::|n| |COMMON-LISP|::|&OPTIONAL|
+        (|LIBSVM|::|len| (|LIBSVM|::|problem-l| |LIBSVM|::|problem|)))
+       |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|72 72 (def-c-enum svm_type C_SVC ...)-18-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   ((|LIBSVM|::|svm_type| |LIBSVM|::|C_SVC| |LIBSVM|::|NU_SVC|
+     |LIBSVM|::|ONE_CLASS| |LIBSVM|::|EPSILON_SVR| |LIBSVM|::|NU_SVR|))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|72 72 (def-c-enum svm_type C_SVC ...)-18-2-1|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 8D 66 0D DB DA 71 55 8E 13 06 DA
+        DC DB 2D 03 03 DA DB 32 9D 3E 19 01)
+   (|LIBSVM|::|C_SVC| 0. (|COMMON-LISP|::|DEFCONSTANT| |LIBSVM|::|C_SVC| 0.)
+    |SYSTEM|::|CONSTANT-WARNING|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|72 72 (def-c-enum svm_type C_SVC ...)-18-2-2|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 8D 66 0D DB DA 71 55 8E 13 06 DA
+        DC DB 2D 03 03 DA DB 32 9D 3E 19 01)
+   (|LIBSVM|::|NU_SVC| 1.
+    (|COMMON-LISP|::|DEFCONSTANT| |LIBSVM|::|NU_SVC|
+     (|COMMON-LISP|::|1+| |LIBSVM|::|C_SVC|))
+    |SYSTEM|::|CONSTANT-WARNING|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|72 72 (def-c-enum svm_type C_SVC ...)-18-2-3|
+   #42Y(00 00 00 00 00 00 00 00 20 01 6B 00 72 B1 DB 38 01 8D 66 0D AC DB 71 55
+        8E 13 06 DB DC AE 2D 03 03 DB AD 32 9D 16 01 3E 19 01)
+   (|LIBSVM|::|NU_SVC| |LIBSVM|::|ONE_CLASS|
+    (|COMMON-LISP|::|DEFCONSTANT| |LIBSVM|::|ONE_CLASS|
+     (|COMMON-LISP|::|1+| |LIBSVM|::|NU_SVC|))
+    |SYSTEM|::|CONSTANT-WARNING|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|72 72 (def-c-enum svm_type C_SVC ...)-18-2-4|
+   #42Y(00 00 00 00 00 00 00 00 20 01 6B 00 72 B1 DB 38 01 8D 66 0D AC DB 71 55
+        8E 13 06 DB DC AE 2D 03 03 DB AD 32 9D 16 01 3E 19 01)
+   (|LIBSVM|::|ONE_CLASS| |LIBSVM|::|EPSILON_SVR|
+    (|COMMON-LISP|::|DEFCONSTANT| |LIBSVM|::|EPSILON_SVR|
+     (|COMMON-LISP|::|1+| |LIBSVM|::|ONE_CLASS|))
+    |SYSTEM|::|CONSTANT-WARNING|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|72 72 (def-c-enum svm_type C_SVC ...)-18-2-5|
+   #42Y(00 00 00 00 00 00 00 00 20 01 6B 00 72 B1 DB 38 01 8D 66 0D AC DB 71 55
+        8E 13 06 DB DC AE 2D 03 03 DB AD 32 9D 16 01 3E 19 01)
+   (|LIBSVM|::|EPSILON_SVR| |LIBSVM|::|NU_SVR|
+    (|COMMON-LISP|::|DEFCONSTANT| |LIBSVM|::|NU_SVR|
+     (|COMMON-LISP|::|1+| |LIBSVM|::|EPSILON_SVR|))
+    |SYSTEM|::|CONSTANT-WARNING|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|72 72 (def-c-enum svm_type C_SVC ...)-18-2-6|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 32 A2 3E 19 01)
+   (|LIBSVM|::|svm_type| |FFI|::|DEF-C-ENUM|
+    #S(|COMMON-LISP|::|HASH-TABLE| :|TEST| |EXT|::|FASTHASH-EQUAL|
+       (4. . |LIBSVM|::|NU_SVR|) (3. . |LIBSVM|::|EPSILON_SVR|)
+       (2. . |LIBSVM|::|ONE_CLASS|) (1. . |LIBSVM|::|NU_SVC|)
+       (0. . |LIBSVM|::|C_SVC|)))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|72 72 (def-c-enum svm_type C_SVC ...)-18-2-7-1|
+   #17Y(00 00 00 00 00 00 00 00 20 01 DA DB 30 02 3E 19 01)
+   (|FFI|::|INT| |LIBSVM|::|svm_type| |FFI|::|PARSE-C-TYPE|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|72 72 (def-c-enum svm_type C_SVC ...)-18-2-7-2|
+   #13Y(00 00 00 00 00 00 00 00 20 01 C5 19 01) (|LIBSVM|::|svm_type|)
+   |COMMON-LISP|::|NIL|)
+#Y(#:|74 74 (def-c-enum kernel_type LINEAR ...)-19-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   ((|LIBSVM|::|kernel_type| |LIBSVM|::|LINEAR| |LIBSVM|::|POLY|
+     |LIBSVM|::|RBF| |LIBSVM|::|SIGMOID| |LIBSVM|::|PRECOMPUTED|))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|74 74 (def-c-enum kernel_type LINEAR ...)-19-2-1|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 8D 66 0D DB DA 71 55 8E 13 06 DA
+        DC DB 2D 03 03 DA DB 32 9D 3E 19 01)
+   (|LIBSVM|::|LINEAR| 0. (|COMMON-LISP|::|DEFCONSTANT| |LIBSVM|::|LINEAR| 0.)
+    |SYSTEM|::|CONSTANT-WARNING|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|74 74 (def-c-enum kernel_type LINEAR ...)-19-2-2|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 8D 66 0D DB DA 71 55 8E 13 06 DA
+        DC DB 2D 03 03 DA DB 32 9D 3E 19 01)
+   (|LIBSVM|::|POLY| 1.
+    (|COMMON-LISP|::|DEFCONSTANT| |LIBSVM|::|POLY|
+     (|COMMON-LISP|::|1+| |LIBSVM|::|LINEAR|))
+    |SYSTEM|::|CONSTANT-WARNING|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|74 74 (def-c-enum kernel_type LINEAR ...)-19-2-3|
+   #42Y(00 00 00 00 00 00 00 00 20 01 6B 00 72 B1 DB 38 01 8D 66 0D AC DB 71 55
+        8E 13 06 DB DC AE 2D 03 03 DB AD 32 9D 16 01 3E 19 01)
+   (|LIBSVM|::|POLY| |LIBSVM|::|RBF|
+    (|COMMON-LISP|::|DEFCONSTANT| |LIBSVM|::|RBF|
+     (|COMMON-LISP|::|1+| |LIBSVM|::|POLY|))
+    |SYSTEM|::|CONSTANT-WARNING|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|74 74 (def-c-enum kernel_type LINEAR ...)-19-2-4|
+   #42Y(00 00 00 00 00 00 00 00 20 01 6B 00 72 B1 DB 38 01 8D 66 0D AC DB 71 55
+        8E 13 06 DB DC AE 2D 03 03 DB AD 32 9D 16 01 3E 19 01)
+   (|LIBSVM|::|RBF| |LIBSVM|::|SIGMOID|
+    (|COMMON-LISP|::|DEFCONSTANT| |LIBSVM|::|SIGMOID|
+     (|COMMON-LISP|::|1+| |LIBSVM|::|RBF|))
+    |SYSTEM|::|CONSTANT-WARNING|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|74 74 (def-c-enum kernel_type LINEAR ...)-19-2-5|
+   #42Y(00 00 00 00 00 00 00 00 20 01 6B 00 72 B1 DB 38 01 8D 66 0D AC DB 71 55
+        8E 13 06 DB DC AE 2D 03 03 DB AD 32 9D 16 01 3E 19 01)
+   (|LIBSVM|::|SIGMOID| |LIBSVM|::|PRECOMPUTED|
+    (|COMMON-LISP|::|DEFCONSTANT| |LIBSVM|::|PRECOMPUTED|
+     (|COMMON-LISP|::|1+| |LIBSVM|::|SIGMOID|))
+    |SYSTEM|::|CONSTANT-WARNING|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|74 74 (def-c-enum kernel_type LINEAR ...)-19-2-6|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 32 A2 3E 19 01)
+   (|LIBSVM|::|kernel_type| |FFI|::|DEF-C-ENUM|
+    #S(|COMMON-LISP|::|HASH-TABLE| :|TEST| |EXT|::|FASTHASH-EQUAL|
+       (4. . |LIBSVM|::|PRECOMPUTED|) (3. . |LIBSVM|::|SIGMOID|)
+       (2. . |LIBSVM|::|RBF|) (1. . |LIBSVM|::|POLY|)
+       (0. . |LIBSVM|::|LINEAR|)))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|74 74 (def-c-enum kernel_type LINEAR ...)-19-2-7-1|
+   #17Y(00 00 00 00 00 00 00 00 20 01 DA DB 30 02 3E 19 01)
+   (|FFI|::|INT| |LIBSVM|::|kernel_type| |FFI|::|PARSE-C-TYPE|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|74 74 (def-c-enum kernel_type LINEAR ...)-19-2-7-2|
+   #13Y(00 00 00 00 00 00 00 00 20 01 C5 19 01) (|LIBSVM|::|kernel_type|)
+   |COMMON-LISP|::|NIL|)
+#Y(#:|76 92 (def-c-type parameter (c-struct vector # ...))-20-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|parameter|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|76 92 (def-c-type parameter (c-struct vector # ...))-20-2-1|
+   #17Y(00 00 00 00 00 00 00 00 20 01 DA DB 30 02 3E 19 01)
+   ((|FFI|::|C-STRUCT| |COMMON-LISP|::|VECTOR|
+     (|LIBSVM|::|svm_type| |FFI|::|INT|) (|LIBSVM|::|kernel_type| |FFI|::|INT|)
+     (|LIBSVM|::|degree| |FFI|::|INT|)
+     (|LIBSVM|::|gamma| |COMMON-LISP|::|DOUBLE-FLOAT|)
+     (|LIBSVM|::|coef0| |COMMON-LISP|::|DOUBLE-FLOAT|)
+     (|LIBSVM|::|cache_size| |COMMON-LISP|::|DOUBLE-FLOAT|)
+     (|LIBSVM|::|eps| |COMMON-LISP|::|DOUBLE-FLOAT|)
+     (|LIBSVM|::|C| |COMMON-LISP|::|DOUBLE-FLOAT|)
+     (|LIBSVM|::|nr_weight| |FFI|::|INT|)
+     (|LIBSVM|::|weight_label| (|FFI|::|C-ARRAY-PTR| |FFI|::|INT|))
+     (|LIBSVM|::|weight| (|FFI|::|C-ARRAY-PTR| |COMMON-LISP|::|DOUBLE-FLOAT|))
+     (|LIBSVM|::|nu| |COMMON-LISP|::|DOUBLE-FLOAT|)
+     (|LIBSVM|::|p| |COMMON-LISP|::|DOUBLE-FLOAT|)
+     (|LIBSVM|::|shrinking| |FFI|::|INT|)
+     (|LIBSVM|::|probability| |FFI|::|INT|))
+    |LIBSVM|::|parameter| |FFI|::|PARSE-C-TYPE|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|76 92 (def-c-type parameter (c-struct vector # ...))-20-2-2|
+   #13Y(00 00 00 00 00 00 00 00 20 01 C5 19 01) (|LIBSVM|::|parameter|)
+   |COMMON-LISP|::|NIL|)
+#Y(#:|92 94 (def-c-type model c-pointer)-21-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|model|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|92 94 (def-c-type model c-pointer)-21-2-1|
+   #17Y(00 00 00 00 00 00 00 00 20 01 DA DB 30 02 3E 19 01)
+   (|FFI|::|C-POINTER| |LIBSVM|::|model| |FFI|::|PARSE-C-TYPE|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|92 94 (def-c-type model c-pointer)-21-2-2|
+   #13Y(00 00 00 00 00 00 00 00 20 01 C5 19 01) (|LIBSVM|::|model|)
+   |COMMON-LISP|::|NIL|)
+#Y(#:|96 101 (FFI:DEF-CALL-OUT svm_destroy_model (:ARGUMENTS #) ...)-22|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   ("svm_destroy_model"
+    #1=((:|ARGUMENTS| (|LIBSVM|::|model| |LIBSVM|::|model|))
+        (:|RETURN-TYPE| |COMMON-LISP|::|NIL|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|svm_destroy_model| . #1#)
+    |FFI|::|PARSE-C-FUNCTION| |FFI|::|*FOREIGN-LIBRARY*|
+    |FFI|::|FIND-FOREIGN-FUNCTION| |LIBSVM|::|svm_destroy_model|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|102 105 (defun destroy-model (model) ...)-23-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|destroy-model|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|102 105 (defun destroy-model (model) ...)-23-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|destroy-model| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|destroy-model|
+       #26Y(00 00 00 00 01 00 00 00 26 02 AD 2F 00 1F 09 AD 2F 01 AD 63 30 02
+            19 02 19 02)
+       (|FFI|::|VALIDP| |LIBSVM|::|svm_destroy_model| |FFI|::|SET-VALIDP|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|model|) |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|106 108 (COMMON-LISP:DEFUN finalize-model (model) ...)-24|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|finalize-model| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|finalize-model|
+       #21Y(00 00 00 00 01 00 00 00 26 02 AD DA 70 01 99 02 30 03 9E 19 02)
+       (:|COPY| |FFI|::|SET-FOREIGN-POINTER| |LIBSVM|::|destroy-model|
+        |EXT|::|FINALIZE|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|model|) |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|110 112 (def-call-out check-parameter (:NAME "svm_check_parameter") ...)-25-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|check-parameter|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|110 112 (def-call-out check-parameter (:NAME "svm_check_parameter") ...)-25-2|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   (#1="svm_check_parameter"
+    #2=((:|NAME| #1#)
+        (:|ARGUMENTS|
+         (|LIBSVM|::|problem| (|FFI|::|C-POINTER| |LIBSVM|::|problem|))
+         (|LIBSVM|::|param| (|FFI|::|C-POINTER| |LIBSVM|::|parameter|)))
+        (:|RETURN-TYPE| |FFI|::|C-STRING|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|check-parameter| . #2#)
+    |FFI|::|PARSE-C-FUNCTION| |FFI|::|*FOREIGN-LIBRARY*|
+    |FFI|::|FIND-FOREIGN-FUNCTION| |LIBSVM|::|check-parameter|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|113 115 (FFI:DEF-CALL-OUT svm_train (:ARGUMENTS # #) ...)-26|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   ("svm_train"
+    #1=((:|ARGUMENTS|
+         (|LIBSVM|::|problem| (|FFI|::|C-POINTER| |LIBSVM|::|problem|))
+         (|LIBSVM|::|param| (|FFI|::|C-POINTER| |LIBSVM|::|parameter|)))
+        (:|RETURN-TYPE| |LIBSVM|::|model|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|svm_train| . #1#)
+    |FFI|::|PARSE-C-FUNCTION| |FFI|::|*FOREIGN-LIBRARY*|
+    |FFI|::|FIND-FOREIGN-FUNCTION| |LIBSVM|::|svm_train|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|116 119 (defun train (problem parameter) ...)-27-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|train|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|116 119 (defun train (problem parameter) ...)-27-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|train| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|train|
+       #31Y(00 00 00 00 02 00 00 00 26 03 AE AE 70 00 92 00 08 AF AF 70 03 2F
+            04 19 04 DB DC AE 33 02 1E)
+       (|LIBSVM|::|check-parameter| "~S: ~A" |LIBSVM|::|train|
+        |LIBSVM|::|svm_train| |LIBSVM|::|finalize-model|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|problem| |LIBSVM|::|parameter|) |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|121 124 (FFI:DEF-CALL-OUT svm_cross_validation (:ARGUMENTS # # ...) ...)-28|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   ("svm_cross_validation"
+    #1=((:|ARGUMENTS|
+         (|LIBSVM|::|problem| (|FFI|::|C-POINTER| |LIBSVM|::|problem|))
+         (|LIBSVM|::|parameter| (|FFI|::|C-POINTER| |LIBSVM|::|parameter|))
+         (|LIBSVM|::|nr_fold| |FFI|::|INT|)
+         (|LIBSVM|::|target| |FFI|::|C-POINTER|))
+        (:|RETURN-TYPE| |COMMON-LISP|::|NIL|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|svm_cross_validation| . #1#)
+    |FFI|::|PARSE-C-FUNCTION| |FFI|::|*FOREIGN-LIBRARY*|
+    |FFI|::|FIND-FOREIGN-FUNCTION| |LIBSVM|::|svm_cross_validation|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|125 131 (defun cross-validation (problem parameter nr_fold) ...)-29-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|cross-validation|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|125 131 (defun cross-validation (problem parameter nr_fold) ...)-29-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|cross-validation| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|cross-validation|
+       #80Y(00 00 00 00 03 00 00 00 26 04 00 2B 03 7F 04 00 00 7F 03 00 01 7F
+            02 00 02 68 00 00 68 01 01 70 00 92 00 1C AD 6D 03 01 DE DF 68 04
+            00 2F 06 43 14 AC E1 8B 08 10 87 00 00 73 03 00 30 0D 19 06 DB DC
+            AE 33 02 1E E3 E4 6F 0B E6 AF E1 33 03 1F)
+       (|LIBSVM|::|check-parameter| "~S: ~A" |LIBSVM|::|cross-validation|
+        #Y(|LIBSVM|::|cross-validation-1|
+           #28Y(00 00 00 00 01 00 00 00 26 02 69 00 01 69 00 02 69 00 03 B0 2D
+                04 01 AD 2F 02 19 02)
+           (|COMMON-LISP|::|NIL| |LIBSVM|::|svm_cross_validation|
+            |FFI|::|FOREIGN-VALUE|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+           (|LIBSVM|::|target|) |COMMON-LISP|::|NIL| 1)
+        |FFI|::|C-ARRAY| |COMMON-LISP|::|DOUBLE-FLOAT| |LIBSVM|::|problem-l|
+        |COMMON-LISP|::|UNSIGNED-BYTE| |SYSTEM|::|%THE| |COMMON-LISP|::|ERROR|
+        "The form ~S yielded ~:[no values~;~:*~{~S~^ ; ~}~] ,~@\n
+                       that's not of type ~S."
+        |SYSTEM|::|TEXT| (|LIBSVM|::|problem-l| |LIBSVM|::|problem|)
+        |FFI|::|EXEC-ON-STACK|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|problem| |LIBSVM|::|parameter| |LIBSVM|::|nr_fold|)
+       |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|133 135 (def-call-out save-model (:NAME "svm_save_model") ...)-30-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|save-model|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|133 135 (def-call-out save-model (:NAME "svm_save_model") ...)-30-2|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   (#1="svm_save_model"
+    #2=((:|NAME| #1#)
+        (:|ARGUMENTS| (|LIBSVM|::|model_file_name| |FFI|::|C-STRING|)
+         (|LIBSVM|::|model| |LIBSVM|::|model|))
+        (:|RETURN-TYPE| |FFI|::|INT|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|save-model| . #2#)
+    |FFI|::|PARSE-C-FUNCTION| |FFI|::|*FOREIGN-LIBRARY*|
+    |FFI|::|FIND-FOREIGN-FUNCTION| |LIBSVM|::|save-model|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|136 137 (FFI:DEF-CALL-OUT svm_load_model (:ARGUMENTS #) ...)-31|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   ("svm_load_model"
+    #1=((:|ARGUMENTS| (|LIBSVM|::|model_file_name| |FFI|::|C-STRING|))
+        (:|RETURN-TYPE| |LIBSVM|::|model|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|svm_load_model| . #1#)
+    |FFI|::|PARSE-C-FUNCTION| |FFI|::|*FOREIGN-LIBRARY*|
+    |FFI|::|FIND-FOREIGN-FUNCTION| |LIBSVM|::|svm_load_model|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|138 139 (defun load-model (model_file_name) ...)-32-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|load-model|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|138 139 (defun load-model (model_file_name) ...)-32-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|load-model| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|load-model|
+       #17Y(00 00 00 00 01 00 00 00 26 02 AD 6F 00 2F 01 19 02)
+       (|LIBSVM|::|svm_load_model| |LIBSVM|::|finalize-model|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|model_file_name|) |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|141 143 (def-call-out get-svm-type (:NAME "svm_get_svm_type") ...)-33-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|get-svm-type|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|141 143 (def-call-out get-svm-type (:NAME "svm_get_svm_type") ...)-33-2|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   (#1="svm_get_svm_type"
+    #2=((:|NAME| #1#) (:|ARGUMENTS| (|LIBSVM|::|model| |LIBSVM|::|model|))
+        (:|RETURN-TYPE| |FFI|::|INT|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|get-svm-type| . #2#)
+    |FFI|::|PARSE-C-FUNCTION| |FFI|::|*FOREIGN-LIBRARY*|
+    |FFI|::|FIND-FOREIGN-FUNCTION| |LIBSVM|::|get-svm-type|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|144 146 (def-call-out get-nr-class (:NAME "svm_get_nr_class") ...)-34-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|get-nr-class|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|144 146 (def-call-out get-nr-class (:NAME "svm_get_nr_class") ...)-34-2|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   (#1="svm_get_nr_class"
+    #2=((:|NAME| #1#) (:|ARGUMENTS| (|LIBSVM|::|model| |LIBSVM|::|model|))
+        (:|RETURN-TYPE| |FFI|::|INT|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|get-nr-class| . #2#)
+    |FFI|::|PARSE-C-FUNCTION| |FFI|::|*FOREIGN-LIBRARY*|
+    |FFI|::|FIND-FOREIGN-FUNCTION| |LIBSVM|::|get-nr-class|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|147 148 (FFI:DEF-CALL-OUT svm_get_labels (:ARGUMENTS # #) ...)-35|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   ("svm_get_labels"
+    #1=((:|ARGUMENTS| (|LIBSVM|::|model| |LIBSVM|::|model|)
+         (|LIBSVM|::|label| |FFI|::|C-POINTER|))
+        (:|RETURN-TYPE| |COMMON-LISP|::|NIL|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|svm_get_labels| . #1#)
+    |FFI|::|PARSE-C-FUNCTION| |FFI|::|*FOREIGN-LIBRARY*|
+    |FFI|::|FIND-FOREIGN-FUNCTION| |LIBSVM|::|svm_get_labels|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|149 152 (defun get-labels (model) ...)-36-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|get-labels|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|149 152 (defun get-labels (model) ...)-36-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|get-labels| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|get-labels|
+       #55Y(00 00 00 00 01 00 00 00 26 02 00 2B 01 7F 02 00 00 AC 6D 00 01 DB
+            DC 68 03 00 2F 03 43 14 AC DE 8B 05 0A 87 00 00 73 03 00 30 0A 19
+            03 E0 E1 6F 08 E3 AF DE 33 03 1F)
+       (#Y(|LIBSVM|::|get-labels-1|
+           #21Y(00 00 00 00 01 00 00 00 26 02 69 00 01 AE 30 01 AD 2F 02 19 02)
+           (|COMMON-LISP|::|NIL| |LIBSVM|::|svm_get_labels|
+            |FFI|::|FOREIGN-VALUE|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+           (|LIBSVM|::|label|) |COMMON-LISP|::|NIL| 1)
+        |FFI|::|C-ARRAY| |FFI|::|INT| |LIBSVM|::|get-nr-class|
+        |COMMON-LISP|::|UNSIGNED-BYTE| |SYSTEM|::|%THE| |COMMON-LISP|::|ERROR|
+        "The form ~S yielded ~:[no values~;~:*~{~S~^ ; ~}~] ,~@\n
+                       that's not of type ~S."
+        |SYSTEM|::|TEXT| (|LIBSVM|::|get-nr-class| |LIBSVM|::|model|)
+        |FFI|::|EXEC-ON-STACK|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|model|) |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|153 155 (def-call-out get-svr-probability (:NAME "svm_get_svr_probability") ...)-37-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|get-svr-probability|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|153 155 (def-call-out get-svr-probability (:NAME "svm_get_svr_probability") ...)-37-2|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   (#1="svm_get_svr_probability"
+    #2=((:|NAME| #1#) (:|ARGUMENTS| (|LIBSVM|::|model| |LIBSVM|::|model|))
+        (:|RETURN-TYPE| |COMMON-LISP|::|DOUBLE-FLOAT|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|get-svr-probability| . #2#)
+    |FFI|::|PARSE-C-FUNCTION| |FFI|::|*FOREIGN-LIBRARY*|
+    |FFI|::|FIND-FOREIGN-FUNCTION| |LIBSVM|::|get-svr-probability|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|157 160 (FFI:DEF-CALL-OUT svm_predict_values1 (:NAME "svm_predict_values") ...)-38|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   (#1="svm_predict_values"
+    #2=((:|NAME| #1#)
+        (:|ARGUMENTS| (|LIBSVM|::|model| |LIBSVM|::|model|)
+         (|LIBSVM|::|x| (|FFI|::|C-ARRAY-PTR| |LIBSVM|::|node|))
+         (|LIBSVM|::|dec_values| (|FFI|::|C-PTR| |COMMON-LISP|::|DOUBLE-FLOAT|)
+          :|OUT|))
+        (:|RETURN-TYPE| |COMMON-LISP|::|NIL|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|svm_predict_values1| . #2#)
+    |FFI|::|PARSE-C-FUNCTION| |FFI|::|*FOREIGN-LIBRARY*|
+    |FFI|::|FIND-FOREIGN-FUNCTION| |LIBSVM|::|svm_predict_values1|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|161 164 (FFI:DEF-CALL-OUT svm_predict_values2 (:NAME "svm_predict_values") ...)-39|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   (#1="svm_predict_values"
+    #2=((:|NAME| #1#)
+        (:|ARGUMENTS| (|LIBSVM|::|model| |LIBSVM|::|model|)
+         (|LIBSVM|::|x| (|FFI|::|C-ARRAY-PTR| |LIBSVM|::|node|))
+         (|LIBSVM|::|dec_values| |FFI|::|C-POINTER|))
+        (:|RETURN-TYPE| |COMMON-LISP|::|NIL|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|svm_predict_values2| . #2#)
+    |FFI|::|PARSE-C-FUNCTION| |FFI|::|*FOREIGN-LIBRARY*|
+    |FFI|::|FIND-FOREIGN-FUNCTION| |LIBSVM|::|svm_predict_values2|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|165 173 (defun predict-values (model x) ...)-40-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|predict-values|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|165 173 (defun predict-values (model x) ...)-40-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|predict-values| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|predict-values|
+       #91Y(00 00 00 00 02 00 00 00 26 03 00 2B 02 7F 03 00 00 7F 02 00 01 68
+            00 00 2F 00 26 01 17 68 00 00 68 01 01 70 02 33 01 00 19 04 E4 E5
+            6F 0C E7 AF E2 33 03 1F 68 00 00 6F 03 DE AD 97 02 73 02 39 73 02
+            39 AE 6D 05 01 E0 E1 A0 43 14 AC E2 8B 09 59 87 00 00 73 03 00 30
+            0E 19 06)
+       (|LIBSVM|::|get-svm-type|
+        #S(|COMMON-LISP|::|HASH-TABLE| :|TEST| |EXT|::|STABLEHASH-EQ|
+           (|LIBSVM|::|NU_SVR| . 1.) (|LIBSVM|::|EPSILON_SVR| . 1.)
+           (|LIBSVM|::|ONE_CLASS| . 1.))
+        |LIBSVM|::|svm_predict_values1| |LIBSVM|::|get-nr-class| #10r1/2
+        #Y(|LIBSVM|::|predict-values-1|
+           #25Y(00 00 00 00 01 00 00 00 26 02 69 00 01 69 00 02 AF 2D 03 01 AD
+                2F 02 19 02)
+           (|COMMON-LISP|::|NIL| |LIBSVM|::|svm_predict_values2|
+            |FFI|::|FOREIGN-VALUE|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+           (|LIBSVM|::|dec-values|) |COMMON-LISP|::|NIL| 1)
+        |FFI|::|C-ARRAY| |COMMON-LISP|::|DOUBLE-FLOAT|
+        |COMMON-LISP|::|UNSIGNED-BYTE| |SYSTEM|::|%THE| |COMMON-LISP|::|ERROR|
+        "The form ~S yielded ~:[no values~;~:*~{~S~^ ; ~}~] ,~@\n
+                       that's not of type ~S."
+        |SYSTEM|::|TEXT| |LIBSVM|::|len| |FFI|::|EXEC-ON-STACK|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|model| |LIBSVM|::|x|) |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|175 177 (def-call-out predict (:NAME "svm_predict") ...)-41-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|predict|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|175 177 (def-call-out predict (:NAME "svm_predict") ...)-41-2|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   (#1="svm_predict"
+    #2=((:|NAME| #1#)
+        (:|ARGUMENTS| (|LIBSVM|::|model| |LIBSVM|::|model|)
+         (|LIBSVM|::|x| (|FFI|::|C-ARRAY-PTR| |LIBSVM|::|node|)))
+        (:|RETURN-TYPE| |COMMON-LISP|::|DOUBLE-FLOAT|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|predict| . #2#) |FFI|::|PARSE-C-FUNCTION|
+    |FFI|::|*FOREIGN-LIBRARY*| |FFI|::|FIND-FOREIGN-FUNCTION|
+    |LIBSVM|::|predict| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|178 181 (FFI:DEF-CALL-OUT svm_predict_probability (:ARGUMENTS # # ...) ...)-42|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   ("svm_predict_probability"
+    #1=((:|ARGUMENTS| (|LIBSVM|::|model| |LIBSVM|::|model|)
+         (|LIBSVM|::|x| (|FFI|::|C-ARRAY-PTR| |LIBSVM|::|node|))
+         (|LIBSVM|::|prob_estimates| |FFI|::|C-POINTER|))
+        (:|RETURN-TYPE| |COMMON-LISP|::|DOUBLE-FLOAT|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|svm_predict_probability| . #1#)
+    |FFI|::|PARSE-C-FUNCTION| |FFI|::|*FOREIGN-LIBRARY*|
+    |FFI|::|FIND-FOREIGN-FUNCTION| |LIBSVM|::|svm_predict_probability|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|182 186 (defun predict-probability (model x) ...)-43-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|predict-probability|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|182 186 (defun predict-probability (model x) ...)-43-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|predict-probability| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|predict-probability|
+       #59Y(00 00 00 00 02 00 00 00 26 03 00 2B 02 7F 03 00 00 7F 02 00 01 AC
+            6D 00 01 DB DC 68 03 00 2F 03 43 14 AC DE 8B 05 0A 87 00 00 73 03
+            00 30 0A 19 04 E0 E1 6F 08 E3 AF DE 33 03 1F)
+       (#Y(|LIBSVM|::|predict-probability-1|
+           #27Y(00 00 00 00 01 00 00 00 26 02 69 00 01 69 00 02 AF 6E 03 01 AE
+                6F 02 40 02 19 02)
+           (|COMMON-LISP|::|NIL| |LIBSVM|::|svm_predict_probability|
+            |FFI|::|FOREIGN-VALUE|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+           (|LIBSVM|::|prob_estimates|) |COMMON-LISP|::|NIL| 1)
+        |FFI|::|C-ARRAY| |COMMON-LISP|::|DOUBLE-FLOAT| |LIBSVM|::|get-nr-class|
+        |COMMON-LISP|::|UNSIGNED-BYTE| |SYSTEM|::|%THE| |COMMON-LISP|::|ERROR|
+        "The form ~S yielded ~:[no values~;~:*~{~S~^ ; ~}~] ,~@\n
+                       that's not of type ~S."
+        |SYSTEM|::|TEXT| (|LIBSVM|::|get-nr-class| |LIBSVM|::|model|)
+        |FFI|::|EXEC-ON-STACK|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|model| |LIBSVM|::|x|) |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|188 194 (def-call-out check-probability-model (:NAME "svm_check_probability_model") ...)-44-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|check-probability-model|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|188 194 (def-call-out check-probability-model (:NAME "svm_check_probability_model") ...)-44-2|
+   #36Y(00 00 00 00 00 00 00 00 20 01 DA DB DC 70 03 63 6B 04 01 02 6E 06 05 93
+        00 07 E0 2F 07 E0 AD 32 9C CB 19 02)
+   (#1="svm_check_probability_model"
+    #2=((:|NAME| #1#) (:|ARGUMENTS| (|LIBSVM|::|model| |LIBSVM|::|model|))
+        (:|RETURN-TYPE| |FFI|::|INT|))
+    (|FFI|::|DEF-CALL-OUT| |LIBSVM|::|check-probability-model| . #2#)
+    |FFI|::|PARSE-C-FUNCTION| |FFI|::|*FOREIGN-LIBRARY*|
+    |FFI|::|FIND-FOREIGN-FUNCTION| |LIBSVM|::|check-probability-model|
+    |SYSTEM|::|REMOVE-OLD-DEFINITIONS|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|196 204 (defun destroy-parameter (parameter) ...)-45-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|destroy-parameter|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|196 204 (defun destroy-parameter (parameter) ...)-45-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|destroy-parameter| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|destroy-parameter|
+       #29Y(00 00 00 00 01 00 00 00 26 02 AD 2F 00 1F 0C AD DB 64 2D 03 02 AD
+            63 30 03 19 02 19 02)
+       (|FFI|::|VALIDP| :|FULL| |FFI|::|FOREIGN-FREE| |FFI|::|SET-VALIDP|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|parameter|) |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|206 237 (defun make-parameter (&key # # ...) ...)-46-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|make-parameter|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|206 237 (defun make-parameter (&key # # ...) ...)-46-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|make-parameter| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|make-parameter|
+       #424Y(00 00 00 00 00 00 00 00 A6 1B 10 00 00 00 00 2B 03 3C 11 14 3B 12
+             03 D5 09 12 3B 11 07 92 00 80 C0 D6 09 11 3B 10 08 92 00 80 BE 0E
+             13 09 10 3B 0F 08 92 00 80 BB 03 15 09 0F 3B 0E 08 92 00 80 B8 03
+             16 09 0E 3B 0D 08 92 00 80 B6 03 16 09 0D 3B 0C 08 92 00 80 B4 03
+             19 09 0C 3B 0B 08 92 00 80 B2 03 1B 09 0B 3B 0A 08 92 00 80 B0 03
+             1D 09 0A 3B 09 05 92 00 80 AE D6 0B 01 00 3B 08 06 92 00 80 AA 03
+             20 0B 01 01 3B 07 06 92 00 80 A5 03 22 0B 01 02 3B 06 07 92 00 80
+             A0 03 24 FE 3B 05 07 92 00 80 9E 03 26 FD 3B 04 06 92 00 80 9C D7
+             FC 3B 03 06 92 00 80 9B D6 FB 68 01 00 68 02 01 72 62 90 01 2F 80
+             AC 65 29 65 2A AF 6D 2B 01 63 65 2C 65 2D 68 07 00 68 08 01 72 62
+             2D 08 2E 1B 59 BE D6 5F 09 11 1B FF 3B BE D7 5F 09 10 1B FF 3E BE
+             D9 5F 09 0F 1B FF 41 BE 03 15 5F 09 0E 1B FF 43 BE 03 17 5F 09 0D
+             1B FF 45 BE 03 18 5F 09 0C 1B FF 47 BE 03 1A 5F 09 0B 1B FF 49 BE
+             03 1C 5F 09 0A 1B FF 4B BE 03 1E 5F 1B FF 4C BE 03 1F 5F 1B FF 51
+             BE 03 21 5F 1B FF 56 BE 03 23 5F FE 1B FF 5B BE 03 25 5F FD 1B FF
+             5D BE 03 27 5F FC 1B FF 5E BE 03 28 5F FB 1B FF 5F 65 2F 65 30 AF
+             6D 31 01 63 65 32 65 2D 68 07 00 68 08 02 72 62 2D 08 2E 68 01 00
+             68 02 02 72 62 91 01 2F 5C 65 33 6F 34 65 35 BF BF BF BF BF BF BF
+             BF 68 0B 00 68 0C 01 68 0D 02 BF BF BF BF 73 0F 00 6E 03 36 AC 99
+             37 30 38 15 19 13)
+       (:|V| |LIBSVM|::|svm_type| |LIBSVM|::|kernel_type| |LIBSVM|::|degree|
+        |LIBSVM|::|gamma| |LIBSVM|::|coef0| |LIBSVM|::|cache_size|
+        |LIBSVM|::|eps| |LIBSVM|::|C| |LIBSVM|::|nr_weight|
+        |LIBSVM|::|weight_label| |LIBSVM|::|weight| |LIBSVM|::|nu|
+        |LIBSVM|::|p| |LIBSVM|::|shrinking| |LIBSVM|::|probability| #1=#() 0.
+        1. |LIBSVM|::|RBF| 2. 3. #2=0.0d0 4. 5. #3=100.0d0 6. #4=0.001d0 7.
+        #5=1.0d0 8. 9. #6=#() 10. #7=#() 11. #8=0.5d0 12. #9=0.1d0 13. 14.
+        (|LIBSVM|::|nr_weight| |LIBSVM|::|weight_label|) (1. 1.)
+        #Y(|LIBSVM|::|make-parameter-1|
+           #20Y(00 00 00 00 02 00 00 00 20 03 9F 0C 00 01 9E 0C 00 02 19 03)
+           (|COMMON-LISP|::|NIL|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+        "~S: nr_weight=~:D /= ~:D=(length weight_label)"
+        |LIBSVM|::|make-parameter| |SYSTEM|::|ASSERT-FAILED|
+        (|LIBSVM|::|nr_weight| |LIBSVM|::|weight|) (1. 1.)
+        #Y(|LIBSVM|::|make-parameter-2|
+           #20Y(00 00 00 00 02 00 00 00 20 03 9F 0C 00 01 9E 0C 00 03 19 03)
+           (|COMMON-LISP|::|NIL|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+        "~S: nr_weight=~:D /= ~:D=(length weight)" |LIBSVM|::|parameter|
+        |FFI|::|PARSE-C-TYPE| :|INITIAL-CONTENTS| |FFI|::|FOREIGN-ALLOCATE|
+        |LIBSVM|::|destroy-parameter| |EXT|::|FINALIZE|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP|::|&KEY| (|LIBSVM|::|v| #1# |LIBSVM|::|v-p|)
+        ((|LIBSVM|::|svm_type| |LIBSVM|::|svm_type|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 0.) |LIBSVM|::|C_SVC|))
+        ((|LIBSVM|::|kernel_type| |LIBSVM|::|kernel_type|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 1.) |LIBSVM|::|RBF|))
+        ((|LIBSVM|::|degree| |LIBSVM|::|degree|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 2.) 3.))
+        ((|LIBSVM|::|gamma| |LIBSVM|::|gamma|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 3.) #2#))
+        ((|LIBSVM|::|coef0| |LIBSVM|::|coef0|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 4.) #2#))
+        ((|LIBSVM|::|cache_size| |LIBSVM|::|cache_size|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 5.) #3#))
+        ((|LIBSVM|::|eps| |LIBSVM|::|eps|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 6.) #4#))
+        ((|LIBSVM|::|C| |LIBSVM|::|C|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 7.) #5#))
+        ((|LIBSVM|::|nr_weight| |LIBSVM|::|nr_weight|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 8.) 0.))
+        ((|LIBSVM|::|weight_label| |LIBSVM|::|weight_label|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 9.) #6#))
+        ((|LIBSVM|::|weight| |LIBSVM|::|weight|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 10.) #7#))
+        ((|LIBSVM|::|nu| |LIBSVM|::|nu|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 11.) #8#))
+        ((|LIBSVM|::|p| |LIBSVM|::|p|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 12.) #9#))
+        ((|LIBSVM|::|shrinking| |LIBSVM|::|shrinking|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 13.) 1.))
+        ((|LIBSVM|::|probability| |LIBSVM|::|probability|)
+         (|COMMON-LISP|::|IF| |LIBSVM|::|v-p|
+          (|COMMON-LISP|::|SVREF| |LIBSVM|::|v| 14.) 0.)))
+       "Allocate a `parameter' object.\n
+You do NOT have to call (destroy-parameter ret) yourself!"
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|239 244 (defun parameter-alist (parameter) ...)-47-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|parameter-alist|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|239 244 (defun parameter-alist (parameter) ...)-47-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|parameter-alist| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|parameter-alist|
+       #42Y(00 00 00 00 01 00 00 00 26 02 63 DA 1B 11 94 00 AC B1 AE 70 01 6F
+            02 7B 02 84 02 16 01 83 00 AC 8D 9F 6B 16 01 AC 31 B1 19 03)
+       ((|LIBSVM|::|svm_type| |LIBSVM|::|kernel_type| |LIBSVM|::|degree|
+         |LIBSVM|::|gamma| |LIBSVM|::|coef0| |LIBSVM|::|cache_size|
+         |LIBSVM|::|eps| |LIBSVM|::|C| |LIBSVM|::|nr_weight|
+         |LIBSVM|::|weight_label| |LIBSVM|::|weight| |LIBSVM|::|nu|
+         |LIBSVM|::|p| |LIBSVM|::|shrinking| |LIBSVM|::|probability|)
+        |FFI|::|%SLOT| |FFI|::|FOREIGN-VALUE|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|parameter|) |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|246 255 (defun make-problem (&key # y ...) ...)-48-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|make-problem|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|246 255 (defun make-problem (&key # y ...) ...)-48-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|make-problem| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|make-problem|
+       #135Y(00 00 00 00 00 00 00 00 A6 1B 03 00 00 00 00 2B 03 3B 04 01 C8 0B
+             00 00 3B 03 01 00 0B 00 01 3B 02 06 00 0B 00 02 1B 03 0B 00 02 68
+             00 00 68 01 01 72 62 90 01 2F 2A DE DF AE 6D 06 01 63 E1 E2 68 06
+             00 68 07 01 72 62 2D 08 09 1B 5E E4 E5 AE 6D 0C 01 63 E7 E2 68 06
+             00 68 07 02 72 62 2D 08 09 68 00 00 68 01 02 72 62 91 01 2F 60 E8
+             6F 0F EA 68 02 00 68 03 01 EB 72 3B 68 04 02 EB 72 3B 7B 03 2D 03
+             12 19 05)
+       (:|L| :|Y| :|X| 0. (|LIBSVM|::|l| |LIBSVM|::|y|) (1. 1.)
+        #Y(|LIBSVM|::|make-problem-1|
+           #20Y(00 00 00 00 02 00 00 00 20 03 9F 0C 00 01 9E 0C 00 02 19 03)
+           (|COMMON-LISP|::|NIL|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+        "~S: l=~:D /= ~:D=(length y)" |LIBSVM|::|make-problem|
+        |SYSTEM|::|ASSERT-FAILED| (|LIBSVM|::|l| |LIBSVM|::|x|) (1. 1.)
+        #Y(|LIBSVM|::|make-problem-2|
+           #20Y(00 00 00 00 02 00 00 00 20 03 9F 0C 00 01 9E 0C 00 03 19 03)
+           (|COMMON-LISP|::|NIL|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+        "~S: l=~:D /= ~:D=(length x)" |LIBSVM|::|problem| |FFI|::|PARSE-C-TYPE|
+        :|INITIAL-CONTENTS| |COMMON-LISP|::|VECTOR| |FFI|::|FOREIGN-ALLOCATE|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|COMMON-LISP|::|&KEY| (|LIBSVM|::|l| 0.) |LIBSVM|::|y| |LIBSVM|::|x|)
+       "Create a `problem' object with the specified slots.\n
+You must call (destroy-problem ret) yourself!\n
+ -- but remember that `model' returned by `train' uses `problem',\n
+    so you cannot free `problem' until you free all `model's"
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|257 260 (defun destroy-problem (problem) ...)-49-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|destroy-problem|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|257 260 (defun destroy-problem (problem) ...)-49-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|destroy-problem| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|destroy-problem|
+       #29Y(00 00 00 00 01 00 00 00 26 02 AD 2F 00 1F 0C AD DB 64 2D 03 02 AD
+            63 30 03 19 02 19 02)
+       (|FFI|::|VALIDP| :|FULL| |FFI|::|FOREIGN-FREE| |FFI|::|SET-VALIDP|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|problem|) |COMMON-LISP|::|NIL| 1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|262 290 (defun load-problem (file &key #) ...)-50-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|load-problem|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|262 290 (defun load-problem (file &key #) ...)-50-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|load-problem| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|load-problem|
+       #242Y(03 00 01 00 01 00 00 00 A6 1C 01 00 00 00 3B 01 03 0E 01 F9 DC 01
+             02 DC C8 10 04 B5 38 06 72 0B 53 80 AD B7 DF BA B1 72 9B 2D 04 06
+             63 1B 80 7F AC 72 62 8E AC 80 78 E1 AD DC 73 01 01 90 01 07 80 6D
+             85 0A AC 38 05 31 89 42 02 AD DD 72 3B 84 0B 01 04 1B 3D 14 E7 B7
+             2D 03 0E 93 02 80 67 1B 80 61 B2 B1 AE 38 02 31 8A 42 02 6A 05 6A
+             02 B2 64 63 38 03 B2 81 B1 01 31 89 42 02 6A 05 6A 01 B9 AF 82 01
+             35 0D AE E3 72 3B AE DD 72 3B 7B 02 84 03 E2 B3 38 06 A9 FC 81 7A
+             00 1C 45 16 03 E4 E5 7B 02 9E 7A 72 64 E6 81 3B 00 84 0A 16 02 AF
+             01 02 38 01 80 82 00 1C FF 76 16 01 92 0B FF 95 93 02 03 14 2F 0F
+             3E 54 05 00 00 00 1D 0E 1B 06 05 00 00 00 1D 06 14 EA 64 2D 03 0F
+             55 16 01 EB B3 EC B4 72 64 ED B5 72 64 6E 06 14 B0 40 02 11 19 07)
+       (:|LOG| |COMMON-LISP|::|*STANDARD-OUTPUT*| 0.
+        |COMMON-LISP|::|DOUBLE-FLOAT|
+        |COMMON-LISP|::|*READ-DEFAULT-FLOAT-FORMAT*| |LIBSVM|::|load-problem|
+        |SYSTEM|::|START-MESSAGE| #\# #\: |COMMON-LISP|::|INTEGER| -1. 0.0d0
+        |COMMON-LISP|::|VECTOR|
+        #Y(|LIBSVM|::|load-problem-1|
+           #38Y(00 00 00 00 02 00 00 00 21 18 AF 64 01 05 B5 2D 08 00 DB B0 38
+                02 31 95 AE 24 02 04 DD B0 31 94 AF 31 97 9E 19 04)
+           (|SYSTEM|::|DO-FORMAT-DECIMAL| " record" 1. #\s)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+        |COMMON-LISP|::|FORMAT| |COMMON-LISP|::|CLOSE| :|ABORT| :|L| :|Y| :|X|
+        |LIBSVM|::|make-problem|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|file| |COMMON-LISP|::|&KEY|
+        (|COMMON-LISP|::|LOG| |COMMON-LISP|::|*STANDARD-OUTPUT*|))
+       "Load the `problem' object from a standard libsvm/svmlight problem file:\n
+  target index1:value1 index2:value2 ..."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|292 305 (defun save-problem (file problem &key ...) ...)-51-1|
+   #18Y(00 00 00 00 00 00 00 00 20 01 DA 38 01 31 E6 3E 19 01)
+   (|LIBSVM|::|save-problem|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|292 305 (defun save-problem (file problem &key ...) ...)-51-2|
+   #20Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 DA DC 32 9C C5 19 01)
+   (|LIBSVM|::|save-problem| |SYSTEM|::|REMOVE-OLD-DEFINITIONS|
+    #Y(|LIBSVM|::|save-problem|
+       #171Y(03 00 01 00 02 00 00 00 A6 1D 01 00 00 00 3B 01 03 0E 01 F9 AF DC
+             38 05 72 0B 53 80 7F C8 45 B2 6F 04 B3 AD 70 05 B4 AE 70 06 B4 E1
+             B8 B1 E2 2D 05 09 E4 1B 3F B3 E5 B0 AF 73 01 01 2D 03 0C AD AD 73
+             01 01 63 E4 01 02 1B 09 B8 E8 AF AF 2D 04 0C 85 02 AE B1 72 62 90
+             01 34 12 B0 AF 82 01 01 03 5B F9 A0 5C 5B F8 AD E7 90 01 30 5D 16
+             05 B3 31 97 85 00 AC B0 91 01 34 FF BA 16 04 A2 1F 08 14 E9 B1 72
+             9B 2D 03 0C 41 05 00 00 02 1D 03 14 2F 10 46 54 05 00 00 00 1D 0E
+             1B 06 05 00 00 00 1D 06 14 EB 64 2D 03 10 55 19 05)
+       (:|LOG| |COMMON-LISP|::|*STANDARD-OUTPUT*| :|OUTPUT|
+        #.#'|COMMON-LISP|::|VALUES| |LIBSVM|::|problem-l| |LIBSVM|::|problem-y|
+        |LIBSVM|::|problem-x| |LIBSVM|::|save-problem| "records"
+        |SYSTEM|::|START-MESSAGE| 0.
+        #Y(|LIBSVM|::|save-problem-1|
+           #20Y(00 00 00 00 02 00 00 00 21 18 AF 01 09 B8 2D 0B 00 9E 19 04)
+           (|SYSTEM|::|DO-FORMAT-GENERAL-FLOAT|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+        |COMMON-LISP|::|FORMAT| -1.
+        #Y(|LIBSVM|::|save-problem-2|
+           #35Y(00 00 00 00 03 00 00 00 21 19 DA B1 31 94 B0 01 06 B6 2D 08 01
+                DC B1 31 94 B0 01 09 B8 2D 0B 03 9E 19 05)
+           (#\sPACE |SYSTEM|::|DO-FORMAT-DECIMAL| #\:
+            |SYSTEM|::|DO-FORMAT-GENERAL-FLOAT|)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+        #Y(|LIBSVM|::|save-problem-3|
+           #38Y(00 00 00 00 02 00 00 00 21 18 AF 64 01 05 B5 2D 08 00 DB B0 38
+                02 31 95 AE 24 02 04 DD B0 31 94 AF 31 97 9E 19 04)
+           (|SYSTEM|::|DO-FORMAT-DECIMAL| " byte" 1. #\s)
+           (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+        |COMMON-LISP|::|CLOSE| :|ABORT|)
+       (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|)
+       (|LIBSVM|::|file| |LIBSVM|::|problem| |COMMON-LISP|::|&KEY|
+        (|COMMON-LISP|::|LOG| |COMMON-LISP|::|*STANDARD-OUTPUT*|))
+       "Write the `problem' object into a standard libsvm/svmlight problem file:\n
+  target index1:value1 index2:value2 ..."
+       1))
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|307 307 (pushnew :LIBSVM *features*)-52|
+   #21Y(00 00 00 00 00 00 00 00 20 01 DA 6B 01 38 03 31 C5 0F 01 19 01)
+   (:|LIBSVM| |COMMON-LISP|::|*FEATURES*|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|308 308 (provide "libsvm")-53|
+   #15Y(00 00 00 00 00 00 00 00 20 01 DA 2F 01 19 01)
+   ("libsvm" |COMMON-LISP|::|PROVIDE|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
+#Y(#:|309 309 (pushnew "LIBSVM" CUSTOM:*SYSTEM-PACKAGE-LIST* ...)-54|
+   #22Y(00 00 00 00 00 00 00 00 20 01 DA 6B 01 DC 38 02 31 C5 0F 01 19 01)
+   ("LIBSVM" |CUSTOM|::|*SYSTEM-PACKAGE-LIST*| #.#'|CS-COMMON-LISP|::|string=|)
+   (|COMMON-LISP|::|T| |COMMON-LISP|::|T| |COMMON-LISP|::|T|))
